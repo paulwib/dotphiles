@@ -13,8 +13,21 @@ ServerAliveCountMax 6
 ServerAliveInterval 30
 
 # My Hosts
-#Host hostname hostname.fqdn.com
-#    Hostname hostname.fqdn.com
+Host indigofera
+    Port 2383
+    HostName indigofera.dh.bytemark.co.uk
+
+Host indigo
+    Port 2947
+    HostName indigo.dh.bytemark.co.uk
+
+Host hsg
+   Port 2654
+   HostName hsg.dh.bytemark.co.uk
+
+Host tera
+    User root
+    HostName 192.168.1.45
 
 # Default
 Host *

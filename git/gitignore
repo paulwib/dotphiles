@@ -5,7 +5,7 @@
 #
 # Authors:
 #   Ben O'Hara <bohara@gmail.com>
-#
+#   Paul Willoughby <paul@fivetide.com>
 
 # Compiled source
 *.pyc
@@ -45,4 +45,9 @@ Thumbs.db
 svn-commit.*
 tags
 TAGS
-
+# Test sqlite databases
+*.db 
+# Log files
+*.log
+# Tmux session files
+*.session

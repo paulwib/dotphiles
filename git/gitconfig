@@ -5,17 +5,20 @@
 #
 # Authors:
 #   Ben O'Hara <bohara@gmail.com>
-#
+#   Paul Willoughby <paul@fivetide.com>
 
 # Global Config
 [user]
-  name = "**Your Name**"
-  email = "**Your Email**"
+  name = Paul Willoughby
+  email = paul@fivetide.com
   #signingkey = **Your GPG ID**
 
 [branch "master"]
   remote = origin
   merge = refs/heads/master
+
+[push]
+    default = upstream
 
 [color]
   diff = auto

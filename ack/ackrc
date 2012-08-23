@@ -7,6 +7,10 @@
 #   Ben O'Hara <bohara@gmail.com>
 #
 
+--type-set
+lsi=.PRD,.ADJ,.WDL,.ITM,.prd,.adj,.itm,.wdl
+--type-set
+csv=.csv
 --type-add
 ruby=.haml,.builder,.rake
 --type-add
@@ -14,7 +18,7 @@ css=.sass,.scss
 --type-add
 js=.coffee
 --type-set
-markdown=.markdown,.md,.mdown
+markdown=.markdown,.md,.mdown..mdwn
 --type-set
 actionscript=.as
 --type-set
@@ -27,5 +31,4 @@ rdoc=.rdoc
 --markdown
 --actionscript
 --objc
---ignore-dir=.idea
 

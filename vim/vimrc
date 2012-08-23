@@ -15,13 +15,31 @@ if has("user_commands")
   filetype off
   set rtp+=~/.vim/bundle/vundle/
   call vundle#rc()
-  "let g:vundles=['general', 'programming', 'php', 'ruby', 'python', 'javascript', 'html', 'misc']
-  let g:vundles=['general']
+  let g:vundles=['general', 'programming', 'php', 'ruby', 'python', 'javascript', 'html', 'misc']
+  "let g:vundles=['general']
   " Load 'vundles'
   source ~/.vim/vundles.vim
   " Add extra bundles here...
   " Bundle 'reponame'
+  Bundle 'L9'
+  Bundle 'FuzzyFinder'
 endif
 
 " Customize to your needs...
 
+" Colors
+set t_Co=256
+
+" Autocomplete options
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+autocmd FileType c set omnifunc=ccomplete#Complete
+
+" FuzzyFinder config
+"
+" ,f opens fuzzy finder file
+map <leader>f :FufFile<CR>
