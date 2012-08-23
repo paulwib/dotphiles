@@ -1,38 +1,49 @@
-#
-# dotphiles : https://github.com/dotphiles/dotphiles
-#
-# Description:  Config for ssh client
-#
+ServerAliveInterval 60
 
-# Global Settings
-ForwardAgent yes
-#VisualHostKey yes
-HashKnownHosts no
-#ConnectTimeout 2
-ServerAliveCountMax 6
-ServerAliveInterval 30
+Host fivetide
+    User fivetide
+    HostName fivetide.com
 
-# My Hosts
+Host mum
+    User liz
+    HostName fivetide.com
+
 Host indigofera
-    Port 2383
-    HostName indigofera.dh.bytemark.co.uk
+	User paul
+	Port 2383
+	HostName indigofera.dh.bytemark.co.uk
+
+Host indigofera-dhshell
+	User dhshell
+	IdentityFile ~/.ssh/indigofera.dh.key
+	HostName indigofera.dhadmin.bytemark.co.uk
 
 Host indigo
-    Port 2947
-    HostName indigo.dh.bytemark.co.uk
+	User paul
+	Port 2947
+	HostName indigo.dh.bytemark.co.uk
+
+Host indigo-dhshell
+	User dhshell
+	IdentityFile ~/.ssh/indigo.dh.key
+	HostName indigo.dhadmin.bytemark.co.uk
 
 Host hsg
-   Port 2654
-   HostName hsg.dh.bytemark.co.uk
+	User paul
+	Port 2654
+	HostName hsg.dh.bytemark.co.uk
 
-Host tera
-    User root
-    HostName 192.168.1.45
+Host hsg-dhshell
+	User dhshell
+	IdentityFile ~/.ssh/hsg.dh.key
+	HostName hsg.dhadmin.bytemark.co.uk
 
-# Default
-Host *
-    #User username
-    StrictHostKeyChecking ask
-    ControlMaster auto
-    ControlPath ~/.ssh/master/%r@%h:%p
+Host poison
+    User telly
+    Port 22
+    HostName poison.local
+
+Host indigo-intranet
+    Port 2222
+    HostName 88.215.4.157
 
