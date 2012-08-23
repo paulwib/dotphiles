@@ -23,6 +23,7 @@ if has("user_commands")
   " Bundle 'reponame'
   Bundle 'L9'
   Bundle 'FuzzyFinder'
+  Bundle 'paulwib/vim-colorschemes'
 endif
 
 " Customize to your needs...

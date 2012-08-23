@@ -58,6 +58,7 @@ tmux/tmux.conf
 vim/dotvim:.vim
 vim/vimrc
 vim/gvimrc
+vim/colors.vim:.vim/plugin/settings/colors.vim
 #wget/wgetrc
 #zsh/fasdrc
 #zsh/dotzsh:.zsh
