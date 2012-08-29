@@ -15,7 +15,7 @@ Host indigofera
 
 Host indigofera-dhshell
 	User dhshell
-	IdentityFile ~/.ssh/indigofera.dh.key
+	IdentityFile ~/.ssh/id_indigofera.dh.key
 	HostName indigofera.dhadmin.bytemark.co.uk
 
 Host indigo
@@ -25,7 +25,7 @@ Host indigo
 
 Host indigo-dhshell
 	User dhshell
-	IdentityFile ~/.ssh/indigo.dh.key
+	IdentityFile ~/.ssh/id_indigo.dh.key
 	HostName indigo.dhadmin.bytemark.co.uk
 
 Host hsg
@@ -35,7 +35,7 @@ Host hsg
 
 Host hsg-dhshell
 	User dhshell
-	IdentityFile ~/.ssh/hsg.dh.key
+	IdentityFile ~/.ssh/id_hsg.dh.key
 	HostName hsg.dhadmin.bytemark.co.uk
 
 Host poison
