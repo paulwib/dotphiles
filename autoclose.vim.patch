@@ -1,0 +1,12 @@
+--- autoclose.vim.dist	2012-08-29 11:35:50.000000000 +0100
++++ autoclose.vim	2012-08-29 11:55:31.000000000 +0100
+@@ -95,7 +95,8 @@
+         "the following simply creates an ambiguous mapping so vim fully
+         "processes the escape sequence for terminal keys, see 'ttimeout' for a
+         "rough explanation, this just forces it to work
+-        if &term[:4] == "xterm"
++        " PW 29 Aug 2012 - Added for screen too as was a problem in tmux
++        if &term[:4] == "xterm" || &term[:5] == "screen"
+             inoremap <silent> <C-[>OC <RIGHT>
+         endif
+         let g:autoclose_on = 1
