@@ -25,10 +25,4 @@ actionscript=.as
 cucumber=.feature
 --type-set
 rdoc=.rdoc
---ruby
---css
---js
---markdown
---actionscript
---objc
 

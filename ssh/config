@@ -47,3 +47,7 @@ Host indigo-intranet
     Port 2222
     HostName 88.215.4.157
 
+# Terastation
+Host tera
+    HostName 192.168.1.45
+    User root
