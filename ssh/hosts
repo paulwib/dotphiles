@@ -1,0 +1,17 @@
+# Remote
+Host indigofera
+    Port 2383
+    HostName indigofera.dh.bytemark.co.uk
+
+Host indigo
+    Port 2947
+    HostName indigo.dh.bytemark.co.uk
+
+Host hsg
+   Port 2654
+   HostName hsg.dh.bytemark.co.uk
+
+# Terastation
+Host tera
+    HostName 192.168.1.45
+    User root
