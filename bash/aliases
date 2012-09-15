@@ -1,19 +1,24 @@
 # aliases
 
+# Get the os
+OS=${OSTYPE//[0-9.]/}
+
 # Easier navigation: .., ..., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."
 alias ~="cd ~"
 alias -- -="cd -"
 
-# List in colour
-alias ls='ls --color=auto'
-alias dir='dir --color=auto'
-alias vdir='vdir --color=auto'
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-
+# Colourizing lists for linux
+if [[ "$OS" =~ ^linux ]]
+  then
+  alias ls='ls --color=auto'
+  alias dir='dir --color=auto'
+  alias vdir='vdir --color=auto'
+  alias grep='grep --color=auto'
+  alias fgrep='fgrep --color=auto'
+  alias egrep='egrep --color=auto'
+fi
 # List dir contents aliases
 # ref: http://ss64.com/osx/ls.html
 # Long form no user group, color
