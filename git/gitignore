@@ -46,8 +46,11 @@ svn-commit.*
 tags
 TAGS
 # Test sqlite databases
-*.db 
+*.db
 # Log files
 *.log
 # Tmux session files
 *.session
+# Any file can be kept out of version control by adding .local
+*.local
+

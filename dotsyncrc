@@ -20,6 +20,8 @@
 dotsyncrc
 ack/ackrc
 #bin:bin
+bash/bash_profile
+bash/bashrc
 ctags/ctags
 #curl/curlrc
 git/gitconfig
