@@ -21,7 +21,9 @@ done
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # Bash completion (installed via Homebrew; source after `brew` is added to PATH)
-[ -r "$(brew --prefix)/etc/bash_completion" ] && source "$(brew --prefix)/etc/bash_completion"
+if command -v brew > /dev/null 2>&1; then
+    [ -r "$(brew --prefix)/etc/bash_completion" ] && source "$(brew --prefix)/etc/bash_completion"
+fi
 
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
