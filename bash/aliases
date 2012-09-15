@@ -6,7 +6,7 @@ alias ...="cd ../.."
 alias ~="cd ~"
 alias -- -="cd -"
 
-# Colourizing lists for linux
+# Linux specific
 if [[ "$OSTYPE" =~ ^linux ]]
   then
   alias ls='ls --color=auto'

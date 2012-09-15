@@ -34,6 +34,20 @@ shopt -s histappend
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell
 
-# check the window size after each command and, if necessary,
+# Check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
+
+# Use combined repo/local SSH config which contains info you may not want in
+# your dotfiles repo, like domain names and ports
+
+if [ ! -e ~/.ssh/config.local ]; then
+    echo "Making SSH config"
+    if [ -e ~/.ssh/hosts.local ]; then
+        cat ~/.ssh/config ~/.ssh/hosts.local > ~/.ssh/config.local
+    else
+        cp ~/.ssh/config ~/.ssh/config.local
+    fi
+fi
+alias ssh='ssh -F ~/.ssh/config.local'
+
