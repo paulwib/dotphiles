@@ -42,7 +42,6 @@ shopt -s checkwinsize
 # your dotfiles repo, like domain names and ports
 
 if [ ! -e ~/.ssh/config.local ]; then
-    echo "Making SSH config"
     if [ -e ~/.ssh/hosts.local ]; then
         cat ~/.ssh/config ~/.ssh/hosts.local > ~/.ssh/config.local
     else
