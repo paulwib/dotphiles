@@ -12,8 +12,9 @@ cmus/autosave
 cmus/cache
 cmus/*-history
 cmus/*.pl
-ssh/id*
+ssh/config
 ssh/environment*
+ssh/id*
 ssh/known_hosts
 ssh/master/*
 subversion/README.txt
