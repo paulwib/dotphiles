@@ -3,13 +3,13 @@
 # Local and private settings not under version control (e.g. git credentials)
 FILES="$HOME/.bash_profile.local"
 # Exports
-FILES="$FILES $HOME/.dotfiles/bash/exports"
+FILES="$FILES $HOME/.bash_exports"
 # Aliases
-FILES="$FILES $HOME/.dotfiles/bash/aliases"
+FILES="$FILES $HOME/.bash_aliases"
 # Functions
-FILES="$FILES $HOME/.dotfiles/bash/functions"
+FILES="$FILES $HOME/.bash_functions"
 # Custom Bash prompt
-FILES="$FILES $HOME/.dotfiles/bash/bash_prompt"
+FILES="$FILES $HOME/.bash_prompt"
 
 # Source all readable files in FILES
 for file in $FILES
@@ -38,15 +38,16 @@ shopt -s cdspell
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
-# Use combined repo/local SSH config which contains info you may not want in
-# your dotfiles repo, like domain names and ports
-
-if [ ! -e ~/.ssh/config.local ]; then
+# SSH config created by mixing ssh/options and ssh/hosts.local
+# (ssh/options is in git repo, ssh/hosts.local is not)
+# Did also try calling it config and then creating a config.local file and
+# aliasing ssh to use that (-F config.local), but that doesn't work with git,
+# it's like the alis is ignored
+if [ ! -e ~/.ssh/config ]; then
     if [ -e ~/.ssh/hosts.local ]; then
-        cat ~/.ssh/config ~/.ssh/hosts.local > ~/.ssh/config.local
+        cat ~/.ssh/options ~/.ssh/hosts.local > ~/.ssh/config
     else
-        cp ~/.ssh/config ~/.ssh/config.local
+        cp ~/.ssh/options ~/.ssh/config
     fi
 fi
-alias ssh='ssh -F ~/.ssh/config.local'
 

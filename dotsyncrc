@@ -20,7 +20,11 @@
 dotsyncrc
 ack/ackrc
 #bin:bin
+bash/bash_aliases
+bash/bash_exports
+bash/bash_functions
 bash/bash_profile
+bash/bash_prompt
 bash/bashrc
 ctags/ctags
 #curl/curlrc
