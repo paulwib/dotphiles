@@ -43,6 +43,7 @@ git/gitk
 #mutt
 #mutt/muttrc
 #mutt/offlineimaprc
+mysql/my.cnf
 #python/pythonrc
 #python/pylintrc
 #ruby/irbrc
@@ -64,7 +65,6 @@ tmux/tmux.conf
 vim/dotvim:.vim
 vim/vimrc
 vim/gvimrc
-vim/colors.vim:.vim/plugin/settings/colors.vim
 #wget/wgetrc
 #zsh/fasdrc
 #zsh/dotzsh:.zsh
