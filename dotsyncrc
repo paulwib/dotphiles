@@ -44,6 +44,7 @@ git/gitk
 #mutt/muttrc
 #mutt/offlineimaprc
 mysql/my.cnf
+mysql/my.grc
 #python/pythonrc
 #python/pylintrc
 #ruby/irbrc
