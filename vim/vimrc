@@ -12,6 +12,7 @@ source ~/.vim/dotvim.vim
 
 if has("user_commands")
   set nocompatible
+  filetype on
   filetype off
   set rtp+=~/.vim/bundle/vundle/
   call vundle#rc()
