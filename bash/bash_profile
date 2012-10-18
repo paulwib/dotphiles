@@ -31,6 +31,9 @@ shopt -s nocaseglob
 # Append to the Bash history file, rather than overwriting it
 shopt -s histappend
 
+# When recalling a command from history with number like !123, put it on command line without executing
+shopt -s histverify
+
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell
 
