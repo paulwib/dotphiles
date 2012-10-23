@@ -22,9 +22,8 @@ if has("user_commands")
   source ~/.vim/vundles.vim
   " Add extra bundles here...
   " Bundle 'reponame'
-  Bundle 'L9'
-  Bundle 'FuzzyFinder'
-  Bundle 'paulwib/vim-colorschemes'
+  "Bundle 'L9'
+  "Bundle 'FuzzyFinder'
 endif
 
 " Customize to your needs...
