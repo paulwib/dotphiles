@@ -36,3 +36,6 @@ set t_Co=256
 " ,f opens fuzzy finder file
 map <leader>f :FufFile<CR>
 
+" Source any local config not in dotfiles (like I have to use tabs at work)
+runtime ~/.vimrc.local
+
