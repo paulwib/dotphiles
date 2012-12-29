@@ -21,6 +21,7 @@ export HISTCONTROL=ignoredups
 [ -d "$HOME/pear/bin" ] && PATH="$PATH:$HOME/pear/bin";
 [ -d "$HOME/.dotfiles/bin" ] && PATH="$PATH:$HOME/.dotfiles/bin";
 [ -d "$HOME/.rvm/bin" ] && PATH="$PATH:$HOME/.rvm/bin";
+[ -d "/usr/local/mysql/bin" ] && PATH="/usr/local/mysql/bin:$PATH";
 # Add brew-installed GNU core utilities bin
 if command -v brew > /dev/null 2>&1; then
     [ -d "$(brew --prefix coreutils)/libexec/gnubin" ] && PATH="$PATH:$(brew --prefix coreutils)/libexec/gnubin";
