@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Take notes at the command line
+NOTES_FILE=$HOME/.n
+function n() {
+    n="$@"
+    if [ -z "$n" ]; then
+        if [ -e $NOTES_FILE ]; then
+            cat -n $NOTES_FILE
+        else
+            echo "No notes, type n 'My note' to add"
+        fi
+    else
+        echo "Adding note: '$n'"
+        echo $n >> $NOTES_FILE
+    fi
+}
+
