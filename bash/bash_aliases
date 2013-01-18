@@ -6,6 +6,9 @@ alias ...="cd ../.."
 alias ~="cd ~"
 alias -- -="cd -"
 
+# Find a file by name
+alias f="find . -name"
+
 # Linux specific
 if [[ "$OSTYPE" =~ ^linux ]]
   then
