@@ -12,7 +12,7 @@ function n() {
         fi
     else
         echo "Adding note: '$n'"
-        echo $n >> $NOTES_FILE
+        echo "$n" >> $NOTES_FILE
     fi
 }
 
