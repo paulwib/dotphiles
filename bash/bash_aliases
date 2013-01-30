@@ -19,6 +19,7 @@ if [[ "$OSTYPE" =~ ^linux ]]
   alias fgrep='fgrep --color=auto'
   alias egrep='egrep --color=auto'
 fi
+
 # List dir contents aliases
 # ref: http://ss64.com/osx/ls.html
 # Long form no user group, color
@@ -57,3 +58,10 @@ alias hidedotfiles="defaults write com.apple.Finder AppleShowAllFiles -bool fals
 # Hide/show all desktop icons (useful when presenting)
 alias showdeskicons="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 alias hidedeskicons="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
+
+# Fix tmux config
+if [[ "$(uname)" = "Darwin" ]]; then
+    alias tmux='tmux -2 -f ~/.tmux-osx.conf'
+else
+    alias tmux='tmux -2'
+fi
