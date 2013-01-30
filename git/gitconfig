@@ -106,6 +106,7 @@
   s  = status
   a  = add
   ia = add
+  au = add -u
   ir = reset
 
   # log
@@ -115,7 +116,8 @@
   lg  = log --topo-order --all --graph --pretty=format:'%C(yellow)%h%C(reset) %s %C(red)%d%C(reset)%n'
   lga = log --topo-order --all --graph --pretty=format:'%C(yellow)%h %C(cyan)%cn%C(reset) %s %C(red)%d%C(reset)%n'
   lm  = log --topo-order --pretty=format:'%s'
-  lh  = shortlog --summary --numbered
+  ln  = shortlog --summary --numbered
+  lh  = log --pretty=format:'%h'
   llf = fsck --lost-found
 
   # remote
