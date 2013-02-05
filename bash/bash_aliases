@@ -43,6 +43,8 @@ alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pa
 
 # Flush DNS cache
 alias flushdns="dscacheutil -flushcache"
+# Aggressively flush DNS cache
+alias killdns="sudo killall -HUP mDNSResponder"
 
 # Empty the Trash on all mounted volumes and the main HDD
 # Also, clear Apple’s System Logs to improve shell startup speed
