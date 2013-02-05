@@ -20,6 +20,11 @@
 [push]
     default = simple
 
+# Fix problems pushing to origin master
+# @see http://www.lorrin.org/blog/2011/10/03/argumentless-git-pull-and-git-push/
+[remote "origin"]
+	push = HEAD
+
 [color]
   diff = auto
   status = auto
@@ -126,4 +131,3 @@
   rea = remote add
   rex = remote rm
   rem = remote rename
-
