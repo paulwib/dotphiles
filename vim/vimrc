@@ -37,5 +37,6 @@ set t_Co=256
 map <leader>f :FufFile<CR>
 
 " Source any local config not in dotfiles (like I have to use tabs at work)
-runtime ~/.vimrc.local
+" This needs to be somewhere in your vim path - ~/.vim is a good idea.
+runtime vimrc.local
 
