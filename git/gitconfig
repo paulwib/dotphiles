@@ -110,7 +110,7 @@
   # index
   s  = status
   a  = add
-  ia = add
+  ia = add -i
   au = add -u
   ir = reset
 
@@ -123,6 +123,9 @@
   lm  = log --topo-order --pretty=format:'%s'
   ln  = shortlog --summary --numbered
   lh  = log --pretty=format:'%h'
+  lhm = log --pretty=format:'%h %s'
+  # YAML log data for HTML templates e.g. ly | template.mustache | bcat
+  ly  = log --pretty=format:'  - {commit: %h, sha: %H message: \"%s\", author: \"%an <%ae>\"}'
   llf = fsck --lost-found
 
   # remote

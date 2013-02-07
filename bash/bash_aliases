@@ -41,10 +41,10 @@ alias localip="ipconfig getifaddr en1"
 # Copy my public key to my clipboard
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
 
-# Flush DNS cache
-alias flushdns="dscacheutil -flushcache"
-# Aggressively flush DNS cache
-alias killdns="sudo killall -HUP mDNSResponder"
+# Flush DNS cache (OSX 10.6)
+#alias flushdns="sudo dscacheutil -flushcache"
+# Flush DNS cache (OSX Lion 10.7/Mountain Lion 10.8)
+alias flushdns="sudo killall -HUP mDNSResponder"
 
 # Empty the Trash on all mounted volumes and the main HDD
 # Also, clear Apple’s System Logs to improve shell startup speed

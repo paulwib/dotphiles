@@ -16,3 +16,16 @@ function n() {
     fi
 }
 
+# Find commit shas by text in first line of commit
+# Useful for finding all commit SHAs for a given issue, but without displaying the commit message
+# (when would you need that?)
+function git-sha-grep() {
+    s="$@"
+    if [ -z "$s" ]; then
+      echo "Find commit shas by text in first line of commit"
+      echo "usage: git-sha-grep [search string]"
+    else
+      git log --pretty=format:'%H %s' | grep -i "$s" | cut -b 1-40
+    fi
+}
+
