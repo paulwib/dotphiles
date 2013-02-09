@@ -18,7 +18,7 @@
   merge = refs/heads/master
 
 [push]
-    default = simple
+    default = upstream
 
 # Fix problems pushing to origin master
 # @see http://www.lorrin.org/blog/2011/10/03/argumentless-git-pull-and-git-push/
