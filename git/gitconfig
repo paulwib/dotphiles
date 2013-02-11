@@ -18,7 +18,7 @@
   merge = refs/heads/master
 
 [push]
-    default = simple
+    default = upstream
 
 # Fix problems pushing to origin master
 # @see http://www.lorrin.org/blog/2011/10/03/argumentless-git-pull-and-git-push/
@@ -123,7 +123,7 @@
   lm  = log --topo-order --pretty=format:'%s'
   ln  = shortlog --summary --numbered
   lh  = log --pretty=format:'%h'
-  lhm = log --pretty=format:'%h %s'
+  lhm = log --pretty=format:'%aD %h %s'
   # YAML log data for HTML templates e.g. ly | template.mustache | bcat
   ly  = log --pretty=format:'  - {commit: %h, sha: %H message: \"%s\", author: \"%an <%ae>\"}'
   llf = fsck --lost-found
