@@ -6,6 +6,10 @@ alias ...="cd ../.."
 alias ~="cd ~"
 alias -- -="cd -"
 
+# Quick exit
+alias x="exit"
+alias q="exit"
+
 # Find a file by name
 alias f="find . -name"
 
