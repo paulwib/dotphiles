@@ -12,7 +12,7 @@ cmus/autosave
 cmus/cache
 cmus/*-history
 cmus/*.pl
-ssh/auth*
+ssh/authorized_keys
 ssh/config
 ssh/environment*
 ssh/id*
