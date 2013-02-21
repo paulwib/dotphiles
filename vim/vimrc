@@ -36,6 +36,11 @@ set t_Co=256
 " ,f opens fuzzy finder file
 map <leader>f :FufFile<CR>
 
+" <Ctrl+\> Open tag definition in new tab
+map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+" <Alt+]> Open tag definition in new vertical split
+map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+
 " Source any local config not in dotfiles (like I have to use tabs at work)
 " This needs to be somewhere in your vim path - ~/.vim is a good idea.
 runtime vimrc.local
