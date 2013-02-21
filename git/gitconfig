@@ -21,6 +21,7 @@
     default = upstream
 
 # Fix problems pushing to origin master
+# On first push do: git push -u origin <branch>
 # @see http://www.lorrin.org/blog/2011/10/03/argumentless-git-pull-and-git-push/
 [remote "origin"]
 	push = HEAD
