@@ -26,7 +26,8 @@ if has("user_commands")
   Bundle 'FuzzyFinder'
 endif
 
-" Customize to your needs...
+" Extra neosnippets to override/extend defaults
+let g:neosnippet#snippets_directory='~/.vim/snippets'
 
 " Colors
 set t_Co=256
