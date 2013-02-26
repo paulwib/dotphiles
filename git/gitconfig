@@ -56,6 +56,9 @@
   editor = /usr/bin/vim
   excludesfile = ~/.gitignore
 
+[merge]
+	tool = kdiff3
+
 [alias]
   # branch
   b  = branch
@@ -80,6 +83,7 @@
   # merge
   m   = merge
   mom = merge origin/master
+  mt  = mergetool
   # push
   p   = push
   pa  = push --all
