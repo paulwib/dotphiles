@@ -20,6 +20,12 @@
 [push]
     #default = upstream
 
+# Fix problems pushing to origin master
+# On first push do: git push -u origin <branch>
+# @see http://www.lorrin.org/blog/2011/10/03/argumentless-git-pull-and-git-push/
+[remote "origin"]
+	push = HEAD
+
 [color]
   diff = auto
   status = auto
@@ -48,6 +54,7 @@
   pager = less -FRSX
   whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
   editor = /usr/bin/vim
+  excludesfile = ~/.gitignore
 
 [alias]
   # branch
@@ -105,7 +112,8 @@
   # index
   s  = status
   a  = add
-  ia = add
+  ia = add -i
+  au = add -u
   ir = reset
 
   # log
@@ -115,7 +123,11 @@
   lg  = log --topo-order --all --graph --pretty=format:'%C(yellow)%h%C(reset) %s %C(red)%d%C(reset)%n'
   lga = log --topo-order --all --graph --pretty=format:'%C(yellow)%h %C(cyan)%cn%C(reset) %s %C(red)%d%C(reset)%n'
   lm  = log --topo-order --pretty=format:'%s'
-  lh  = shortlog --summary --numbered
+  ln  = shortlog --summary --numbered
+  lh  = log --pretty=format:'%h'
+  lhm = log --pretty=format:'%aD %h %s'
+  # YAML log data for HTML templates e.g. ly | template.mustache | bcat
+  ly  = log --pretty=format:'  - {commit: %h, sha: %H message: \"%s\", author: \"%an <%ae>\"}'
   llf = fsck --lost-found
 
   # remote
@@ -124,4 +136,3 @@
   rea = remote add
   rex = remote rm
   rem = remote rename
-
