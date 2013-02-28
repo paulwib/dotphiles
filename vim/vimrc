@@ -21,9 +21,8 @@ if has("user_commands")
   " Load 'vundles'
   source ~/.vim/vundles.vim
   " Add extra bundles here...
-  " Bundle 'reponame'
-  Bundle 'L9'
-  Bundle 'FuzzyFinder'
+  "Bundle 'L9'
+  "Bundle 'FuzzyFinder'
 endif
 
 " Extra neosnippets to override/extend defaults
