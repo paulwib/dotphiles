@@ -7,7 +7,7 @@
 #   Ben O'Hara <bohara@gmail.com>
 #
 --type-set
-smarty=.tpl
+handlebars=.hbs,.handlebars
 --type-set
 lsi=.PRD,.ADJ,.WDL,.ITM,.prd,.adj,.itm,.wdl
 --type-set
@@ -21,7 +21,7 @@ smarty=.tpl
 --type-add
 js=.coffee
 --type-set
-markdown=.markdown,.md,.mdown..mdwn
+markdown=.markdown,.md,.mdown,.mdwn
 --type-set
 actionscript=.as
 --type-set
