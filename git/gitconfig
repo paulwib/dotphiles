@@ -120,6 +120,11 @@
   au = add -u
   ir = reset
 
+  # notes
+  fn  = fetch origin refs/notes/*:refs/notes/*
+  pn  = push origin refs/notes/*
+  an  = notes add
+
   # log
   l   = log --topo-order --pretty=format:'%C(yellow)%h %C(cyan)%cn %C(blue)%cr%C(reset) %s'
   ls  = log --topo-order --stat --pretty=format:'%C(bold)%C(yellow)Commit:%C(reset) %C(yellow)%H%C(red)%d%n%C(bold)%C(yellow)Author:%C(reset) %C(cyan)%an <%ae>%n%C(bold)%C(yellow)Date:%C(reset)   %C(blue)%ai (%ar)%C(reset)%n%+B'
