@@ -117,7 +117,7 @@
   s  = status
   a  = add
   ia = add -i
-  au = add -u
+  au = add -u :/
   ir = reset
 
   # notes
