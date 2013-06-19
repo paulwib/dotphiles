@@ -28,8 +28,12 @@ set t_Co=256
 
 " <Ctrl+\> Open tag definition in new tab
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+
 " <Alt+]> Open tag definition in new vertical split
 map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+
+" <Leader>cd Switch working directory to current file
+nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
 
 " Source any local config not in dotfiles (like I have to use tabs at work)
 " This needs to be somewhere in your vim path - ~/.vim is a good idea.
