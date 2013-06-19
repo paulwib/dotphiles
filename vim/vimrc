@@ -17,12 +17,7 @@ if has("user_commands")
   set rtp+=~/.vim/bundle/vundle/
   call vundle#rc()
   let g:vundles=['general', 'programming', 'php', 'ruby', 'python', 'javascript', 'html', 'misc']
-  "let g:vundles=['general']
-  " Load 'vundles'
   source ~/.vim/vundles.vim
-  " Add extra bundles here...
-  "Bundle 'L9'
-  "Bundle 'FuzzyFinder'
 endif
 
 " Extra neosnippets to override/extend defaults
@@ -30,11 +25,6 @@ let g:neosnippet#snippets_directory='~/.vim/snippets'
 
 " Colors
 set t_Co=256
-
-" FuzzyFinder config
-"
-" ,f opens fuzzy finder file
-map <leader>f :FufFile<CR>
 
 " <Ctrl+\> Open tag definition in new tab
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
