@@ -70,5 +70,5 @@ alias hidedeskicons="defaults write com.apple.finder CreateDesktop -bool false &
 if [[ "$(uname)" = "Darwin" ]]; then
     alias tmux='tmux -2 -f ~/.tmux-osx.conf'
 else
-    alias tmux='tmux -2'
+    alias tmux='TERM=screen-256color tmux'
 fi
