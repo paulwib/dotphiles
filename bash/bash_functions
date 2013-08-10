@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# Take notes at the command line
+NOTES_FILE=$HOME/.n
+function n() {
+    n="$@"
+    if [ -z "$n" ]; then
+        if [ -e $NOTES_FILE ]; then
+            cat -n $NOTES_FILE
+        else
+            echo "No notes, type n 'My note' to add"
+        fi
+    else
+        echo "Adding note: '$n'"
+        echo "$n" >> $NOTES_FILE
+    fi
+}
+
+# Find commit shas by text in first line of commit
+# Useful for finding all commit SHAs for a given issue, but without displaying the commit message
+# (when would you need that?)
+function git-sha-grep() {
+    s="$@"
+    if [ -z "$s" ]; then
+      echo "Find commit shas by text in first line of commit"
+      echo "usage: git-sha-grep [search string]"
+    else
+      git log --pretty=format:'%H %s' | grep -i "$s" | cut -b 1-40
+    fi
+}
+

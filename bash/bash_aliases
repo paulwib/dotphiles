@@ -6,6 +6,13 @@ alias ...="cd ../.."
 alias ~="cd ~"
 alias -- -="cd -"
 
+# Quick exit
+alias x="exit"
+alias q="exit"
+
+# Find a file by name
+alias f="find . -name"
+
 # Linux specific
 if [[ "$OSTYPE" =~ ^linux ]]
   then
@@ -15,7 +22,9 @@ if [[ "$OSTYPE" =~ ^linux ]]
   alias grep='grep --color=auto'
   alias fgrep='fgrep --color=auto'
   alias egrep='egrep --color=auto'
+  alias xclip="xclip -selection clipboard"
 fi
+
 # List dir contents aliases
 # ref: http://ss64.com/osx/ls.html
 # Long form no user group, color
@@ -34,11 +43,13 @@ alias catn="cat -n"
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en1"
 
-# Copy my public key to my clipboard
+# Copy my public key to my clipboard (OSX)
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
 
-# Flush DNS cache
-alias flushdns="dscacheutil -flushcache"
+# Flush DNS cache (OSX 10.6)
+#alias flushdns="sudo dscacheutil -flushcache"
+# Flush DNS cache (OSX Lion 10.7/Mountain Lion 10.8)
+alias flushdns="sudo killall -HUP mDNSResponder"
 
 # Empty the Trash on all mounted volumes and the main HDD
 # Also, clear Apple’s System Logs to improve shell startup speed
@@ -54,3 +65,10 @@ alias hidedotfiles="defaults write com.apple.Finder AppleShowAllFiles -bool fals
 # Hide/show all desktop icons (useful when presenting)
 alias showdeskicons="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 alias hidedeskicons="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
+
+# Fix tmux config
+if [[ "$(uname)" = "Darwin" ]]; then
+    alias tmux='tmux -2 -f ~/.tmux-osx.conf'
+else
+    alias tmux='TERM=screen-256color tmux'
+fi

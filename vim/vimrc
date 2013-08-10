@@ -12,36 +12,30 @@ source ~/.vim/dotvim.vim
 
 if has("user_commands")
   set nocompatible
+  filetype on
   filetype off
   set rtp+=~/.vim/bundle/vundle/
   call vundle#rc()
   let g:vundles=['general', 'programming', 'php', 'ruby', 'python', 'javascript', 'html', 'misc']
-  "let g:vundles=['general']
-  " Load 'vundles'
   source ~/.vim/vundles.vim
-  " Add extra bundles here...
-  " Bundle 'reponame'
-  Bundle 'L9'
-  Bundle 'FuzzyFinder'
-  Bundle 'paulwib/vim-colorschemes'
 endif
 
-" Customize to your needs...
+" Extra neosnippets to override/extend defaults
+let g:neosnippet#snippets_directory='~/.vim/snippets'
 
 " Colors
 set t_Co=256
 
-" Autocomplete options
-autocmd FileType python set omnifunc=pythoncomplete#Complete
-autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
-autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-autocmd FileType c set omnifunc=ccomplete#Complete
+" <Ctrl+\> Open tag definition in new tab
+map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 
-" FuzzyFinder config
-"
-" ,f opens fuzzy finder file
-map <leader>f :FufFile<CR>
+" <Alt+]> Open tag definition in new vertical split
+map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+
+" <Leader>cd Switch working directory to current file
+nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
+
+" Source any local config not in dotfiles (like I have to use tabs at work)
+" This needs to be somewhere in your vim path - ~/.vim is a good idea.
+runtime vimrc.local
 

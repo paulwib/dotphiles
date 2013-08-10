@@ -16,9 +16,12 @@ export HISTCONTROL=ignoredups
 
 # If these bins exist, then add them to the PATH
 [ -d "/usr/bin" ] && PATH="$PATH:/usr/bin";
+[ -d "/usr/local/share/npm/bin" ] && PATH="$PATH:/usr/local/share/npm/bin";
 [ -d "$HOME/bin" ] && PATH="$PATH:$HOME/bin";
+[ -d "$HOME/pear/bin" ] && PATH="$PATH:$HOME/pear/bin";
 [ -d "$HOME/.dotfiles/bin" ] && PATH="$PATH:$HOME/.dotfiles/bin";
 [ -d "$HOME/.rvm/bin" ] && PATH="$PATH:$HOME/.rvm/bin";
+[ -d "/usr/local/mysql/bin" ] && PATH="/usr/local/mysql/bin:$PATH";
 # Add brew-installed GNU core utilities bin
 if command -v brew > /dev/null 2>&1; then
     [ -d "$(brew --prefix coreutils)/libexec/gnubin" ] && PATH="$PATH:$(brew --prefix coreutils)/libexec/gnubin";

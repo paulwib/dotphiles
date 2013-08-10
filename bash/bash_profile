@@ -10,6 +10,7 @@ FILES="$FILES $HOME/.bash_aliases"
 FILES="$FILES $HOME/.bash_functions"
 # Custom Bash prompt
 FILES="$FILES $HOME/.bash_prompt"
+# @todo Would be good to have global files for Linux/OSX?
 
 # Source all readable files in FILES
 for file in $FILES
@@ -31,6 +32,9 @@ shopt -s nocaseglob
 # Append to the Bash history file, rather than overwriting it
 shopt -s histappend
 
+# When recalling a command from history with number like !123, put it on command line without executing
+shopt -s histverify
+
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell
 
@@ -42,7 +46,7 @@ shopt -s checkwinsize
 # (ssh/options is in git repo, ssh/hosts.local is not)
 # Did also try calling it config and then creating a config.local file and
 # aliasing ssh to use that (-F config.local), but that doesn't work with git,
-# it's like the alis is ignored
+# it's like the alias is ignored
 if [ ! -e ~/.ssh/config ]; then
     if [ -e ~/.ssh/hosts.local ]; then
         cat ~/.ssh/options ~/.ssh/hosts.local > ~/.ssh/config
@@ -51,3 +55,10 @@ if [ ! -e ~/.ssh/config ]; then
     fi
 fi
 
+# OSX colours
+export CLICOLOR=1
+export LSCOLORS=dxfxcxdxbxegedabagacad
+
+# Node Version Manager
+[[ -s ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh # This loads NVM
+[[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
