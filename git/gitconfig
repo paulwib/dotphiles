@@ -18,7 +18,7 @@
   merge = refs/heads/master
 
 [push]
-    default = upstream
+    default = matching
 
 [color]
   diff = auto
