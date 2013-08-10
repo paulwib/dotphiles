@@ -18,7 +18,6 @@
   merge = refs/heads/master
 
 [push]
-    default = matching
     #default = upstream
 
 # Fix problems pushing to origin master
