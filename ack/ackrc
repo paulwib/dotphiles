@@ -29,4 +29,3 @@ cucumber=.feature
 --type-set
 rdoc=.rdoc
 --ignore-dir=smarty_c
---ignore-file=is:tags
