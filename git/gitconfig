@@ -145,3 +145,5 @@
   rea = remote add
   rex = remote rm
   rem = remote rename
+[help]
+	autocorrect = 5
