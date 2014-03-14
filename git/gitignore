@@ -45,6 +45,7 @@ Thumbs.db
 svn-commit.*
 tags
 TAGS
+*.versionsBackup
 # Test sqlite databases
 *.db
 # Log files
