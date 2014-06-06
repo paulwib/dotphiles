@@ -118,6 +118,7 @@
   a  = add
   ia = add -i
   au = add -u :/
+  ap = add -p
   ir = reset
 
   # notes
