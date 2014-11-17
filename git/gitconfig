@@ -54,7 +54,7 @@
   pager = less -FRSX
   whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
   editor = /usr/bin/vim
-  excludesfile = ~/.gitignore
+	excludesfile = /Users/paul.willoughby/.gitignore
 
 [merge]
 	tool = kdiff3
@@ -146,5 +146,14 @@
   rea = remote add
   rex = remote rm
   rem = remote rename
+
+  #tags
+  tl = tag --sort "v:refname"
 [help]
 	autocorrect = 5
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
