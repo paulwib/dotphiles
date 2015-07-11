@@ -5,6 +5,7 @@
 #
 
 *.swp
+*.pem
 .DS_Store
 *.d/localhost
 aptitude/cache
