@@ -147,8 +147,11 @@
   rex = remote rm
   rem = remote rename
 
-  #tags
+  # tags
   tl = tag --sort "v:refname"
+
+  # blame (ignore file moves, whitespace changes)
+    wha = blame -w -M
 [help]
 	autocorrect = 5
 [difftool "sourcetree"]
