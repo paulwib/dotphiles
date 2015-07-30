@@ -1,18 +1,24 @@
 # Exports
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/opt/X11/lib/pkgconfig
+
 # Path needed for css-sprite/node-canvas to find xcb-shm
 # (something to do with cairo graphics library)
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/opt/X11/lib/pkgconfig
+
 # Make vim the default editor
 export EDITOR="vim"
+
 # Don't clear the screen after quitting a manual page
 export MANPAGER="less -X"
+
 # Larger bash history (allow 32³ entries; default is 500)
 export HISTSIZE=32768
 export HISTFILESIZE=$HISTSIZE
 export HISTCONTROL=ignoredups
+
 # boot2docker
 export DOCKER_HOST=tcp://192.168.59.103:2375
+
 # Make some commands not show up in history
 #export HISTIGNORE="ls:ls *:cd:cd -:pwd;exit:date:* --help"
 
@@ -26,7 +32,10 @@ export DOCKER_HOST=tcp://192.168.59.103:2375
 [ -d "$HOME/pear/bin" ] && PATH="$PATH:$HOME/pear/bin";
 [ -d "$HOME/.dotfiles/bin" ] && PATH="$PATH:$HOME/.dotfiles/bin";
 [ -d "$HOME/.rvm/bin" ] && PATH="$PATH:$HOME/.rvm/bin";
+[ -d "$HOME/Development/golang" ] && export GOPATH="$HOME/Development/golang";
+[ -d "$HOME/Development/golang" ] && PATH="$PATH:$GOPATH/bin";
 [ -d "/usr/local/mysql/bin" ] && PATH="/usr/local/mysql/bin:$PATH";
+
 # Add brew-installed GNU core utilities bin
 if command -v brew > /dev/null 2>&1; then
     [ -d "$(brew --prefix coreutils)/libexec/gnubin" ] && PATH="$PATH:$(brew --prefix coreutils)/libexec/gnubin";
