@@ -18,7 +18,7 @@
 [files]
 # Uncomment examples below
 dotsyncrc
-ack/ackrc
+#ack/ackrc
 #bin:bin
 bash/bash_aliases
 bash/bash_exports
@@ -31,8 +31,8 @@ ctags/ctags
 git/gitconfig
 git/gitignore
 git/gitattributes
-git/tigrc
-git/gitk
+#git/tigrc
+#git/gitk
 #gnupg
 #grc
 #input/editrc
@@ -44,7 +44,7 @@ git/gitk
 #mutt/muttrc
 #mutt/offlineimaprc
 mysql/my.cnf
-mysql/my.grc
+#mysql/my.grc
 #python/pythonrc
 #python/pylintrc
 #ruby/irbrc
@@ -61,8 +61,8 @@ ssh
 #subversion
 #task/task
 #task/taskrc
-tmux/tmux.conf
-tmux/tmux-osx.conf
+#tmux/tmux.conf
+#tmux/tmux-osx.conf
 #tmux/tmuxinator
 vim/dotvim:.vim
 vim/vimrc
