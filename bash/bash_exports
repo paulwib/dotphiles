@@ -16,12 +16,6 @@ export HISTSIZE=32768
 export HISTFILESIZE=$HISTSIZE
 export HISTCONTROL=ignoredups
 
-# boot2docker
-export DOCKER_HOST=tcp://192.168.59.103:2375
-
-# Make some commands not show up in history
-#export HISTIGNORE="ls:ls *:cd:cd -:pwd;exit:date:* --help"
-
 # Move to the beginning of PATH so that it always take precedence over /usr/bin
 [ -d "/usr/local/bin" ] && PATH="/usr/local/bin:$PATH";
 
@@ -31,7 +25,6 @@ export DOCKER_HOST=tcp://192.168.59.103:2375
 [ -d "$HOME/bin" ] && PATH="$PATH:$HOME/bin";
 [ -d "$HOME/pear/bin" ] && PATH="$PATH:$HOME/pear/bin";
 [ -d "$HOME/.dotfiles/bin" ] && PATH="$PATH:$HOME/.dotfiles/bin";
-[ -d "$HOME/.rvm/bin" ] && PATH="$PATH:$HOME/.rvm/bin";
 [ -d "$HOME/Development/golang" ] && export GOPATH="$HOME/Development/golang";
 [ -d "$HOME/Development/golang" ] && PATH="$PATH:$GOPATH/bin";
 [ -d "/usr/local/mysql/bin" ] && PATH="/usr/local/mysql/bin:$PATH";

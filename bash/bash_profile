@@ -10,7 +10,6 @@ FILES="$FILES $HOME/.bash_aliases"
 FILES="$FILES $HOME/.bash_functions"
 # Custom Bash prompt
 FILES="$FILES $HOME/.bash_prompt"
-# @todo Would be good to have global files for Linux/OSX?
 
 # Source all readable files in FILES
 for file in $FILES
@@ -58,7 +57,3 @@ fi
 # OSX colours
 export CLICOLOR=1
 export LSCOLORS=dxfxcxdxbxegedabagacad
-
-# Node Version Manager
-[[ -s ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh # This loads NVM
-[[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
