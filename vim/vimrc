@@ -2,23 +2,9 @@
 " dotphiles : https://github.com/dotphiles/dotphiles
 "
 " Setup vim and load required plugins before dotvim
-"
-" Authors:
-"   Ben O'Hara <bohara@gmail.com>
-"
 
 " Call dotvim
 source ~/.vim/dotvim.vim
-
-if has("user_commands")
-  set nocompatible
-  filetype on
-  filetype off
-  set rtp+=~/.vim/bundle/vundle/
-  call vundle#rc()
-  let g:vundles=['general', 'programming', 'php', 'ruby', 'python', 'javascript', 'html', 'misc']
-  source ~/.vim/vundles.vim
-endif
 
 " Extra neosnippets to override/extend defaults
 let g:neosnippet#snippets_directory='~/.vim/snippets'
