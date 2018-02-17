@@ -18,7 +18,7 @@
   merge = refs/heads/master
 
 [push]
-    #default = upstream
+    default = upstream
 
 # Fix problems pushing to origin master
 # On first push do: git push -u origin <branch>
@@ -86,6 +86,7 @@
   mt  = mergetool
   # push
   p   = push
+  pnf = push --no-verify --force
   pa  = push --all
   pt  = push --tags
   # rebase
@@ -101,7 +102,7 @@
   ca     = commit --all -v
   cm     = commit --message
   cam    = commit --all --message
-  camend = commit --amend --reuse-message HEAD
+  camend = commit --no-verify --amend --reuse-message HEAD
   cundo  = reset --soft "HEAD^"
   cp     = cherry-pick
 
