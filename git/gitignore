@@ -55,4 +55,5 @@ TAGS
 *.session
 # Any file can be kept out of version control by adding .local
 *.local
-
+# Working notes
+wip.md
