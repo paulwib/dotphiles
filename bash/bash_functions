@@ -15,3 +15,35 @@ function n() {
         echo "$n" >> $NOTES_FILE
     fi
 }
+# Delete merged branches from REMOTE
+# WARNING: compares to the current branch you're on so be careful!
+function git-cleanup-remote() {
+  git pull
+  git fetch --all
+  current_branch=$(git rev-parse --abbrev-ref HEAD)
+  merged_remote_branches=$(git branch -r --merged | egrep -v "(^\*|master|dev|integration|HEAD)")
+  # Show branch info
+  echo
+  echo "Current branch: $current_branch"
+  echo
+  echo "Remote branches already merged into '$current_branch':"
+  echo
+  for branch in $merged_remote_branches; do
+    last_change=$(git show --format="last updated %ar by %an" "$branch"  | head -n 1)
+    echo "$branch - $last_change"
+  done
+
+  # Interactively choose whether to delete or not
+  for branch in $merged_remote_branches; do
+    IFS='/' read -r remote shortname <<<"$branch"
+    echo
+    echo "$remote/$shortname"
+    git show --format="%ai (%ar) by %an" "$branch"  | head -n 1
+    read -p "Delete this branch [y,n,q]? " choice
+    case "$choice" in
+      y ) git push --delete $remote $shortname;;
+      q ) break;;
+      * ) echo "Not deleting $branch"; echo;;
+    esac
+  done
+}
